@@ -14,17 +14,8 @@
 
 int		ft_strcmp(const char *source_1, const char *source_2)
 {
-	unsigned char	*s1 = (unsigned char *) source_1;
-	unsigned char	*s2 = (unsigned char *) source_2;
+	int max;
 
-	while (*s1 || *s2)
-	{
-		if (*s1 != *s2)
-		{
-			return (*s1 - *s2);
-		}
-		s1++;
-		s2++;
-	}
-	return (0);
+	max = ft_max(ft_strlen(source_1), ft_strlen(source_2));
+	return (ft_strncmp(source_1, source_2, max));
 }

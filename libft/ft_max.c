@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddelgado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/25 11:53:12 by ddelgado          #+#    #+#             */
-/*   Updated: 2016/09/25 11:53:13 by ddelgado         ###   ########.fr       */
+/*   Created: 2016/10/11 15:17:08 by ddelgado          #+#    #+#             */
+/*   Updated: 2016/10/11 15:17:09 by ddelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_max(long a, long b)
 {
-	return (ft_strncmp(s1, s2, n));
+	if (a > b)
+		return (a);
+	else
+		return (b);
 }
