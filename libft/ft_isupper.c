@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
+checks to see if the passed char is an UpperCase char.
+*/
 int		ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
