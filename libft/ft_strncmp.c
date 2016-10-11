@@ -14,9 +14,11 @@
 
 int	ft_strncmp(const char *source_1, const char *source_2, size_t n)
 {
-	unsigned char	*s1 = (unsigned char *) source_1;
-	unsigned char	*s2 = (unsigned char *) source_2;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
+	s1 = (unsigned char *) source_1;
+	s2 = (unsigned char *) source_2;
 	while ((*s1 || *s2) && n > 0)
 	{
 		if (*s1 != *s2)
