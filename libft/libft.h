@@ -40,6 +40,8 @@ char		*ft_strcat(char *restrict s1, const char *restrict s2);
 int			ft_strcmp(const char *source_1, const char *source_2);
 char		*ft_strstr(const char *big, const char *little);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
+void		*ft_memcpy_back(void *restrict dest, 
+	const void *restrict src, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 
 #endif
