@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_max(long a, long b)
+size_t	ft_max(size_t a, size_t b)
 {
 	if (a > b)
 		return (a);

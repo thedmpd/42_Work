@@ -16,7 +16,8 @@
 # include <unistd.h>
 # include <string.h>
 
-int			ft_max(long a, long b);
+size_t		ft_max(size_t a, size_t b);
+size_t		ft_min(size_t a, size_t b);
 void		ft_putchar_fd(int c, int fd);
 void		ft_putchar(int c);
 void		ft_putstr(char const *s);

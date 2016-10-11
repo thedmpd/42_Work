@@ -14,7 +14,7 @@
 
 int		ft_strcmp(const char *source_1, const char *source_2)
 {
-	int max;
+	size_t max;
 
 	max = ft_max(ft_strlen(source_1), ft_strlen(source_2));
 	return (ft_strncmp(source_1, source_2, max));
