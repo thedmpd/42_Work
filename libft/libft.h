@@ -51,5 +51,6 @@ size_t		ft_strclen(const char *str, char c);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
 char		*ft_strncpy(char *dest, const char *src, size_t n);
 char		*ft_strncat(char *dest, const char *src, size_t n);
+int			ft_atoi(char *str);
 
 #endif
