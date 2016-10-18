@@ -21,8 +21,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	if(ft_memchr(src,c,n) != NULL && i < n)
 	{
 		//printf("%zu\n", ft_strclen(src,c));
-		dest = ft_memcpy(dest,src, i);
-		return(dest + ft_strclen(src, c));
+		dest = ft_strncpy(dest,src, i);
+		return(dest + i);
 	}
 	else if(ft_memchr(src,c,n) == NULL)
 		return(NULL);
