@@ -24,6 +24,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 		*dest = *src;
 		dest++;
 		src++;
+		n--;
 	}
 	*dest = '\0';
 	return (k + ft_strlen(src));
