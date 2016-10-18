@@ -38,7 +38,7 @@ char		*ft_strrchr(const char *s, int c);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
 char		*ft_strcpy(char *dest, const char *src);
-char		*ft_strcat(char *restrict s1, const char *restrict s2);
+char		*ft_strcat(char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_strcmp(const char *source_1, const char *source_2);
 char		*ft_strstr(const char *big, const char *little);
