@@ -54,5 +54,6 @@ char		*ft_strncat(char *dest, const char *src, size_t n);
 int			ft_atoi(char *str);
 void		*ft_malloc(size_t n);
 char		*ft_strdup(const char *src);
+size_t		ft_strlcat(char *dest, const char *src, size_t n);
 
 #endif
