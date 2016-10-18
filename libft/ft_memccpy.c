@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	if(ft_memchr(src,c,n) != NULL)
 	{
-		ft_putstr(ft_strclen(src,c));
+		printf("%d\n", ft_strclen(src,c));
 		dest = ft_memcpy(dest,src, ft_strclen(src,c));
 		return(dest + ft_strclen(src, c));
 	}
