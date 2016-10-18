@@ -17,7 +17,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	if(ft_memchr(src,c,n) != '\0')
 	{
 		dest = ft_memcpy(dest,src, ft_strclen(src,c));
-		return(dest);
+		return(dest + ft_strclen(src, c));
 	}
 	else
 		return(NULL);
