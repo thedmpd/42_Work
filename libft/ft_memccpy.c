@@ -15,7 +15,7 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = ft_strclen(src,c);
 	if(ft_memchr(src,c,n) != NULL && i < n)
