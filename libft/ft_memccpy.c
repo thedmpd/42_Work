@@ -20,7 +20,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	i = ft_strclen(src,c);
 	if(ft_memchr(src,c,n) == NULL)
 		return(NULL);
-	else if(ft_memchr(src,c,n) != NULL && i < n)
+	else if(i < n - 1)
 	{
 		//printf("%zu\n", ft_strclen(src,c));
 		dest = ft_strncpy(dest,src, i);
