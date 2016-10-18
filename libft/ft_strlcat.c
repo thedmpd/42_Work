@@ -15,10 +15,15 @@
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
 	size_t	k;
+	size_t	i;
 
 	k = ft_strlen(dest);
-	while (*dest != '\0')
+	i = n;
+	while (*dest != '\0' && i > 0)
+	{
 		dest++;
+		i--;
+	}
 	while (*src != '\0' &&  (n - k) > 1)
 	{
 		*dest = *src;
