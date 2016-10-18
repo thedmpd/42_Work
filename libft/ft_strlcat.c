@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 
 	k = ft_strlen(dest);
 	i = n;
-	while (*dest != '\0' && i > 1)
+	while (*dest != '\0' && i > 0)
 	{
 		dest++;
 		i--;
