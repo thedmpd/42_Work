@@ -24,9 +24,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 		dest++;
 		i--;
 	}
-	k = (n - i) - k;
+	i = n - (size_t)dest;
 	if(i == 0)
-		return(k + ft_strlen(src));
+		return(((size_t)dest - k) + ft_strlen(src));
 	while (*src != '\0')
 	{
 		if(n > 1)
