@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddelgado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 17:46:18 by ddelgado          #+#    #+#             */
-/*   Updated: 2016/09/24 17:46:20 by ddelgado         ###   ########.fr       */
+/*   Created: 2016/10/18 10:37:16 by ddelgado          #+#    #+#             */
+/*   Updated: 2016/10/18 10:37:18 by ddelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isupper(int c)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		return (1);
-	}
+	if(ft_memchr(src,c,n) != NULL)
+		return(ft_memcpy(dest,src, ft_strclen(src,c)));
 	else
-	{
-		return (0);
-	}
+		return(NULL);
 }

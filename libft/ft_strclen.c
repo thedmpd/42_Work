@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddelgado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/24 17:46:18 by ddelgado          #+#    #+#             */
-/*   Updated: 2016/09/24 17:46:20 by ddelgado         ###   ########.fr       */
+/*   Created: 2016/10/18 10:37:00 by ddelgado          #+#    #+#             */
+/*   Updated: 2016/10/18 10:37:03 by ddelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isupper(int c)
+size_t		ft_strclen(const char *str, char c)
 {
-	if (c >= 'A' && c <= 'Z')
+	int i;
+
+	i = 0;
+	while (*str != '\0')
 	{
-		return (1);
+		if (*str == c)
+			return(i+1);
+		i++;
+		str++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (i);
 }
