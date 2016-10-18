@@ -15,12 +15,20 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	if(ft_memchr(src,c,n) != NULL)
+	int i;
+
+	i = ft_strclen(src,c);
+	if(ft_memchr(src,c,n) != NULL && i < n)
 	{
 		//printf("%zu\n", ft_strclen(src,c));
-		dest = ft_memcpy(dest,src, ft_max(ft_strclen(src,c), n));
+		dest = ft_memcpy(dest,src, i);
 		return(dest + ft_strclen(src, c));
 	}
-	else
+	else if(ft_memchr(src,c,n) == NULL)
 		return(NULL);
+	else
+	{
+		dest = ft_strncpy(dest,src,n);
+		return(dest);
+	}
 }
