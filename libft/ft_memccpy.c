@@ -29,6 +29,6 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	else
 	{
 		dest = ft_strncpy(dest,src,n);
-		return(dest);
+		return(dest + n);
 	}
 }
