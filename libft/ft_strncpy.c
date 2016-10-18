@@ -10,4 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
+char	*ft_strncpy(char *dest, const char *src, size_t n)
+{
+	int i;
+
+	i = ft_strlen(src);
+	if(i < n)
+	{
+		ft_memcpy(dest, src, i);
+		while(i < n)
+		{
+			dest[i] = '\0';
+			i++;
+		}
+		return(dest);
+	}
+	else
+		return(ft_memcpy(dest,src,n));
+}
