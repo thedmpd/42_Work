@@ -14,18 +14,18 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*ret;
-	size_t	retlen;
+	char	*new_string;
 	int		i;
+
 	i = 0;
-	retlen = ft_strlen(s);
-	ret = ft_memalloc(retlen + 1);
+	ret = ft_memalloc(ft_strlen(s) + 1);
 	if(!ret)
 		return(NULL);
 	while (*s)
 	{
-		ret[i++] = f(*s);
+		ret[i] = f(*s);
 		s++;
+		i++:
 	}
 	return (ret);
 }
