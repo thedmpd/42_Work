@@ -21,7 +21,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	new_string = ft_memalloc(sizeof(char) * (ft_strlen(s) + 1));
 	while(*s)
 	{
-		new_string = f(*s);
+		new_string = *f(*s);
 		s++;
 		new_string++;
 	}
