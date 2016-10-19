@@ -57,5 +57,6 @@ char		*ft_strdup(const char *src);
 size_t		ft_strlcat(char *dest, const char *src, size_t n);
 void		ft_memdel(void **ap);
 char		*ft_strnew(size_t size);
+void		ft_strdel(char **as);
 
 #endif
