@@ -20,6 +20,7 @@ int	ft_strncmp(const char *source_1, const char *source_2, size_t n)
 
 	s1 = (unsigned char *) source_1;
 	s2 = (unsigned char *) source_2;
+	i = 0;
 	while (n > 0)
 	{
 		if (s1[i] != s2[i])
