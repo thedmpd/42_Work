@@ -14,6 +14,10 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	ft_strncpy(dest + ft_strlen(dest), src, n + 1);
+	size_t i;
+
+	i = ft_strlen(dest);
+	ft_strncpy(dest + i, src, n);
+	dest[i + n] = '\0';
 	return(dest);
 }
