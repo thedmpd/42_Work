@@ -31,12 +31,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	n = size - destinationlen;
 	if(n == 0)
 		return(destinationlen + ft_strlen(s));
-	while(*s && n > 1)
+	while(*s++ && n-- > 1)
 	{
 		*d = *s;
 		d++;
-		s++;
-		n--;
 	}
 	*d = '\0';
 	s++;
