@@ -14,10 +14,16 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char *new_string;
+	char	*new_string;
 
+	if(!*s || !*f)
+		return(NULL);
 	new_string = ft_memalloc(sizeof(char) * (ft_strlen(s) + 1));
-	ft_memset(new_string, 'A', ft_strlen(s) - 1);
-	ft_striter(new_string, (void *)f);
+	while(*s)
+	{
+		new_string = f(s);
+		s++;
+		new_string++;
+	}
 	return(new_string);
 }
