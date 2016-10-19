@@ -25,7 +25,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	{
 		new_string[i] = f(*s);
 		s++;
-		i++:
+		i++;
 	}
 	return (new_string);
 }
