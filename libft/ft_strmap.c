@@ -17,6 +17,6 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char *new_string;
 
 	new_string = ft_memalloc(sizeof(char) * ft_strlen(s));
-	ft_striter(new_string, (void *)f(char *));
+	ft_striter(new_string, (void *)f(char));
 	return(new_string);
 }
