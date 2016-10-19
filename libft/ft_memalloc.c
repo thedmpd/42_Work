@@ -20,5 +20,6 @@ void	*ft_memalloc(size_t n)
 	ptr = malloc(n);
 	if(!ptr)
 		return(NULL);
+	ft_memset(ptr, 0, n);
 	return(ptr);
 }
