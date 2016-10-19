@@ -18,8 +18,6 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	retlen;
 	int		i;
 	i = 0;
-	if (!s || !f)
-		return (NULL);
 	retlen = ft_strlen(s);
 	ret = ft_memalloc(retlen + 1);
 	if(!ret)
