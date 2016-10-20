@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_digitlen(int n)
+size_t	ft_digitlen(long n)
 {
 	size_t len;
 
