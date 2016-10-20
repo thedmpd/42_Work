@@ -11,8 +11,8 @@
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ft_max.c ft_putchar_fd.c ft_putchar.c ft_putstr.c ft_strlen.c\
-	ft_putendl_fd.c ft_putnbr_fd.c\
+SRC = ft_max.c ft_putchar_fd.c ft_putchar.c  ft_putstr_fd.c ft_strlen.c\
+	ft_putendl_fd.c ft_putnbr_fd.c ft_putstr.c\
 	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c\
 	ft_isupper.c ft_tolower.c ft_toupper.c ft_memchr.c ft_strchr.c ft_strrchr.c\
 	ft_memset.c ft_bzero.c ft_memcpy.c ft_strcpy.c ft_strcat.c ft_strncmp.c\
