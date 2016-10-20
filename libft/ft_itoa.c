@@ -26,7 +26,7 @@ char	*ft_itoa(int n)
 	neg = 0;
 	if (!new_string)
 		return (NULL);
-	new_string[i] = '\0';
+	new_string[i] = '0';
 	if (long_n == 0)
 		return (new_string);
 	neg = (long_n < 0) ? 1 : 0;
