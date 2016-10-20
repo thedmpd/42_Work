@@ -64,6 +64,6 @@ char		*ft_strmap(char const *s, char (*f)(char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 void		ft_putendl(char const *s);
 char		*ft_strrev(char *s);
-size_t		ft_digitlen(long int nb);
+size_t		ft_digitlen(long nb);
 
 #endif

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_digitlen(int nb)
+size_t	ft_digitlen(int n)
 {
 	size_t len;
 
@@ -20,9 +20,9 @@ size_t	ft_digitlen(int nb)
 		len = 1;
 	else
 		len = 0;
-	while (nb > 10 || nb < -10)
+	while (n > 10 || n < -10)
 	{
-		nb /= 10;
+		n /= 10;
 		len++;
 	}
 	return (len + 1);
