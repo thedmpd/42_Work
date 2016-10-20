@@ -34,7 +34,8 @@ char	*ft_itoa(int n)
 	while (long_n != 0)
 	{
 		remainder = long_n % 10;
-		new_string[i++] = remainder + '0';
+		new_string[i++] = (remainder > 9) ? (remainder - 10) + 'a' :
+			remainder + '0';
 		long_n = long_n / 10;
 	}
 	new_string[i] = neg ? '-' : new_string[i];
