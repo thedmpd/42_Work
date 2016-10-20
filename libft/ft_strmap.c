@@ -19,8 +19,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	i = 0;
 	new_string = ft_memalloc(ft_strlen(s) + 1);
-	if(!new_string)
-		return(NULL);
+	if (!new_string)
+		return (NULL);
 	while (*s)
 	{
 		new_string[i] = f(*s);

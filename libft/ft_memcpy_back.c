@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void *ft_memcpy_back(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy_back(void *restrict dest, const void *restrict src, size_t n)
 {
 	unsigned char	i;
 	unsigned char	*destination;

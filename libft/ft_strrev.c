@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddelgado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/20 11:32:22 by ddelgado          #+#    #+#             */
-/*   Updated: 2016/10/20 11:32:23 by ddelgado         ###   ########.fr       */
+/*   Created: 2016/10/20 13:51:50 by ddelgado          #+#    #+#             */
+/*   Updated: 2016/10/20 13:51:52 by ddelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_strrev(char *s)
 {
-	unsigned int i;
+	char	*temp;
+	int		len;
+	int		i;
+	int		j;
 
+	len = ft_strlen(s);
+	temp = ft_strnew(len);
 	i = 0;
-	while (*s)
+	j = len - 1;
+	while (i < len)
 	{
-		f(i, s);
-		s++;
+		temp[i] = s[j - i];
 		i++;
 	}
+	return (temp);
 }

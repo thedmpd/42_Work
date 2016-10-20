@@ -20,7 +20,7 @@ size_t		ft_strclen(const char *str, char c)
 	while (*str != '\0')
 	{
 		if (*str == c)
-			return(i+1);
+			return (i + 1);
 		i++;
 		str++;
 	}

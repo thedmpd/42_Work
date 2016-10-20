@@ -11,10 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
-The strstr() function locates the first occurrence of the null-terminated
-string little in the null-terminated string big.
+**The strstr() function locates the first occurrence of the null-terminated
+**string little in the null-terminated string big.
 */
+
 char	*ft_strstr(const char *big, const char *little)
 {
 	int i;

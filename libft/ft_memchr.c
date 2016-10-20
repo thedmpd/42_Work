@@ -11,10 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
-The memchr() function locates the first occurrence of c (converted to an
-unsigned char) in string s. Returns NULL if c is not in s within n bytes.
+**The memchr() function locates the first occurrence of c (converted to an
+**unsigned char) in string s. Returns NULL if c is not in s within n bytes.
 */
+
 void		*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char *char_ptr;
