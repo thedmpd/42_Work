@@ -71,5 +71,6 @@ char		*ft_strrev(char *s);
 size_t		ft_digitlen(long nb);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int			ft_strequ(char const *s1, char const *s2);
 
 #endif
