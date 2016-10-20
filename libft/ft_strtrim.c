@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s)
 	while (ft_whitespace(*s))
 		s++;
 	i = 0;
-	while (s[i])
+	while (*s)
 		i++;
 	while (ft_whitespace(s[i]) && i > 0)
 		i--;
