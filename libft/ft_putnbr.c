@@ -18,5 +18,5 @@ void	ft_putnbr(int n)
 
 	s = ft_itoa(n);
 	ft_putstr(s);
-	ft_memdel(s);
+	ft_memdel((void *)s);
 }
