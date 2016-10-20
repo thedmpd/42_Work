@@ -18,7 +18,7 @@ SRC = ft_max.c ft_putchar_fd.c ft_putchar.c ft_putstr.c ft_strlen.c\
 	ft_strcmp.c	ft_strstr.c ft_strnstr.c ft_memcpy_back.c ft_memmove.c\
 	ft_memcmp.c ft_isprint.c ft_min.c ft_strclen.c ft_memccpy.c ft_strncpy.c\
 	ft_strncat.c ft_memalloc.c ft_atoi.c ft_strdup.c ft_strlcat.c ft_memdel.c\
-	ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_strmap.c
+	ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_strmap.c ft_striteri.c
 OBJ = $(patsubst %.c,%.o,$(SRC:.c=.o)) 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -c
