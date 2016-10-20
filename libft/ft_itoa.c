@@ -24,6 +24,8 @@ char	*ft_itoa(int n)
 	new_string = ft_strnew(ft_digitlen(n));
 	i = 0;
 	neg = 0;
+	if (!new_string)
+		return (NULL);
 	new_string[i] = '\0';
 	if (long_n == 0)
 		return (new_string);
@@ -32,9 +34,8 @@ char	*ft_itoa(int n)
 	while (long_n != 0)
 	{
 		remainder = long_n % 10;
-		new_string[i] = remainder + '0';
+		new_string[i++] = remainder + '0';
 		long_n = long_n / 10;
-		i++;
 	}
 	new_string[i] = neg ? '-' : new_string[i];
 	return (ft_strrev(new_string));
