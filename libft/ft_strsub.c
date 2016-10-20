@@ -17,11 +17,11 @@ char *ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	int		i;
 
-	sub = ft_strnew(len + 1);
+	sub = ft_strnew(len);
 	i = 0;
 	if (!*sub)
 		return (NULL);
-	while ((start) < len)
+	while (i < len)
 	{
 		sub[i] = s[start];
 		i++;
