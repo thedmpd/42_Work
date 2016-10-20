@@ -14,9 +14,5 @@
 
 void	ft_putstr(char const *s)
 {
-	while (*s != '\0')
-	{
-		ft_putchar(*s);
-		s++;
-	}
+	ft_putstr_fd(s, 1);
 }

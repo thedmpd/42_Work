@@ -14,9 +14,5 @@
 
 void	ft_putendl(char const *s)
 {
-	char i;
-
-	i = '\n';
-	ft_putstr(s);
-	ft_putchar(i);
+	ft_putendl_fd(s, 1);
 }

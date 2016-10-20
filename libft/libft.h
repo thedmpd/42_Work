@@ -20,7 +20,11 @@ size_t		ft_max(size_t a, size_t b);
 size_t		ft_min(size_t a, size_t b);
 void		ft_putchar_fd(int c, int fd);
 void		ft_putchar(int c);
+void		ft_putstr_fd(char const *s, int fd);
+void		ft_putendl_fd(char const *s, int fd);
+void		ft_putnbr_fd(int nb, int fd);
 void		ft_putstr(char const *s);
+void		ft_putnbr(int nb);
 size_t		ft_strlen(const char *str);
 int			ft_isupper(int c);
 int			ft_islower(int c);
@@ -66,6 +70,5 @@ void		ft_putendl(char const *s);
 char		*ft_strrev(char *s);
 size_t		ft_digitlen(long nb);
 char		*ft_itoa(int n);
-void		ft_putnbr(int n);
 
 #endif

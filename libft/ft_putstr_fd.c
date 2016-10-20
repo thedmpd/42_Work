@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddelgado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/20 13:44:27 by ddelgado          #+#    #+#             */
-/*   Updated: 2016/10/20 13:44:28 by ddelgado         ###   ########.fr       */
+/*   Created: 2016/10/20 14:47:06 by ddelgado          #+#    #+#             */
+/*   Updated: 2016/10/20 14:47:07 by ddelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	ft_putnbr_fd(nb, 1);
+	while (*s != '\0')
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
+
