@@ -21,7 +21,7 @@ SRC = ft_max.c ft_putchar_fd.c ft_putchar.c  ft_putstr_fd.c ft_strlen.c\
 	ft_strncat.c ft_memalloc.c ft_atoi.c ft_strdup.c ft_strlcat.c ft_memdel.c\
 	ft_strnew.c ft_strdel.c ft_strclr.c ft_striter.c ft_strmap.c ft_striteri.c\
 	ft_putendl.c ft_strrev.c ft_itoa.c ft_strmapi.c ft_strequ.c ft_strnequ.c\
-	ft_strsub.c ft_strjoin.c ft_strtrim.c
+	ft_strsub.c ft_strjoin.c ft_whitespace.c ft_strtrim.c
 OBJ = $(patsubst %.c,%.o,$(SRC:.c=.o)) 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -c
