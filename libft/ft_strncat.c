@@ -19,5 +19,5 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	i = ft_strlen(dest);
 	ft_strncpy(dest + i, src, n);
 	dest[i + n] = '\0';
-	return(dest);
+	return (dest);
 }
