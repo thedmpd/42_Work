@@ -70,5 +70,6 @@ void		ft_putendl(char const *s);
 char		*ft_strrev(char *s);
 size_t		ft_digitlen(long nb);
 char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
