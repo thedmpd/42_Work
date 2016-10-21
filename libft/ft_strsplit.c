@@ -14,26 +14,27 @@
 
 char	**ft_strsplit(const char *s, char c)
 {
-	char	**segs;
-	char	*src;
-	int		i;
-	int		count;
+	size_t	cur_word;
+	size_t	word_count;
+	char	**words;
+	char	*next;
 
-	i = 0;
-	count = ft_count_objects(s, c);
-	src = (char *)s;
-	segs = (char **)ft_memalloc(sizeof(char *) * count);
-	if (!segs)
+	word_count = ft_count_objects(s, c);
+	words = (char **)ft_memalloc(sizeof(char*) * word_count + 1);
+	if (!words)
 		return (NULL);
-	while (*src)
+	cur_word = 0;
+	while (cur_word < word_count)
 	{
-		if (*src == c)
-		{
-			*src = 0;
-			src++;
-		}
-		segs[i] = src;
-		src++;
+		while (*s == c)
+			s++;
+		next = ft_strchr(s,c);
+		if (next)
+			words[cur_word] = ft_strsub(s, 0, (next - s));
+		else
+			words[cur_word] = ft_strdup(s);
+		s = next;
+		cur_word++;
 	}
-	return (segs);
+	return (words);
 }
