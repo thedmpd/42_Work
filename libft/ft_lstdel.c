@@ -25,7 +25,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 			if (del != NULL)
 				(*del)(next_lst->content, (*next_lst).content_size);
 			temp = next_lst->next;
-			ft_memdel(next_lst);
+			ft_memdel((void **)next_lst);
 			next_lst = temp;
 		}
 		*alst = NULL;
