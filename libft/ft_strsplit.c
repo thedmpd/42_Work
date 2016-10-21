@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	**ft_strsplit(const char *s, char c)
 {
@@ -20,8 +21,9 @@ char	**ft_strsplit(const char *s, char c)
 	char	*next;
 
 	word_count = ft_count_objects(s, c);
+	printf("%zu\n", word_count);
 	words = (char **)ft_memalloc(sizeof(char*) * word_count + 1);
-	if (!words || !(ft_strchr(s,c)))
+	if (!words)
 		return (NULL);
 	cur_word = 0;
 	while (cur_word < word_count)
