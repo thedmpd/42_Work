@@ -16,11 +16,13 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*sortie;
 
-	if (lst != NULL)
+	sortie = NULL;
+	if (lst)
 	{
 		sortie = f(lst);
 		sortie->next = ft_lstmap(lst->next, f);
 		return (sortie);
 	}
-	return (NULL);
+	else
+		return (NULL);
 }
