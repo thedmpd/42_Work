@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list*))
 {
 	t_list	*sortie;
 
-	if (lst)
+	if (lst != NULL)
 	{
 		sortie = f(lst);
 		sortie->next = ft_lstmap(lst->next, f);
