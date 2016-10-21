@@ -20,7 +20,7 @@ char	**ft_strsplit(const char *s, char c)
 	char	*next;
 
 	word_count = ft_count_objects(s, c);
-	words = ft_memalloc(word_count + 1);
+	words = (char **)ft_memalloc(sizeof(char*) * word_count + 1);
 	if (!words)
 		return (NULL);
 	cur_word = 0;
