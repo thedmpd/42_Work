@@ -18,7 +18,7 @@ size_t	ft_count_objects(const char *s, char c)
 	size_t count;
 
 	count = 0;
-	while (*s)
+	while (*s != '\0')
 	{
 		if (*s != c)
 		{
