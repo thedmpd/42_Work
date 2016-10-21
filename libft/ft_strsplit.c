@@ -21,7 +21,7 @@ char	**ft_strsplit(const char *s, char c)
 
 	word_count = ft_count_objects(s, c);
 	words = (char **)ft_memalloc(sizeof(char*) * word_count + 1);
-	if (!words)
+	if (!words || (ft_strchr == 0))
 		return (NULL);
 	cur_word = 0;
 	while (cur_word < word_count)
