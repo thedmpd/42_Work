@@ -21,7 +21,6 @@ char	**ft_strsplit(const char *s, char c)
 	char	*next;
 
 	word_count = ft_count_objects(s, c);
-	printf("%zu\n", word_count);
 	words = (char **)ft_memalloc(sizeof(char*) * word_count + 1);
 	if (!words)
 		return (NULL);
@@ -31,15 +30,13 @@ char	**ft_strsplit(const char *s, char c)
 		while (*s == c)
 			s++;
 		next = ft_strchr(s,c);
+		printf("%s\n", next);
 		if (next)
 		{
 			words[cur_word] = ft_strsub(s, 0, (next - s));
 		}
 		else
 			words[cur_word] = ft_strdup(s);
-		printf("%s\n", words[cur_word]);
-		printf("%s", s);
-		printf("%s\n", "the end.");
 		s = next;
 		cur_word++;
 	}
