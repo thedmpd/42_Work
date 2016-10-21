@@ -33,6 +33,7 @@ char	**ft_strsplit(const char *s, char c)
 		next = ft_strchr(s,c);
 		if (next)
 			words[cur_word] = ft_strsub(s, 0, (next - s));
+		printf("%s\n", words[cur_word]);
 		else
 			words[cur_word] = ft_strdup(s);
 		s = next;
