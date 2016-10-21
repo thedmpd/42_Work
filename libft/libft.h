@@ -77,6 +77,7 @@ char 		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 int			ft_whitespace(int c);
 char		*ft_strtrim(char const *s);
+size_t		ft_count_objects(const char *s, char c);
 char		**ft_strsplit(const char *str, char c);
 
 #endif

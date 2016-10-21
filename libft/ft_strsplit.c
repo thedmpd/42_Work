@@ -12,65 +12,29 @@
 
 #include "libft.h"
 
-static	int		ft_count_words(const char *str, char c)
+char	**ft_strsplit(const char *s, char c)
 {
-	int	word;
-	int	i;
+	size_t	cur_word;
+	size_t	word_count;
+	char	**words;
+	char	*next;
 
-	i = 0;
-	word = 0;
-	if (!str)
-		return (0);
-	while (str[i])
-	{
-		if (str[i] == c && str[i + 1] != c)
-			word++;
-		i++;
-	}
-	if (str[0] != '\0')
-		word++;
-	return (word);
-}
-
-static	char	*ft_word(const char *str, char c, int *i)
-{
-	char	*s;
-	int		k;
-
-	if (!(s = ft_memalloc(ft_strlen(str))))
+	word_count = ft_count_objects(s, c);
+	words = ft_memalloc(word_count + 1);
+	if (!words)
 		return (NULL);
-	k = 0;
-	while (str[*i] != c && str[*i])
+	cur_word = 0;
+	while (cur_word < word_count)
 	{
-		s[k] = str[*i];
-		k++;
-		*i += 1;
+		while (*s == c)
+			s++;
+		next = ft_strchr(s,c);
+		if (next)
+			words[cur_word] = ft_strsub(s, 0, (next - s));
+		else
+			words[cur_word] = ft_strdup(s);
+		s = next;
+		cur_word++;
 	}
-	s[k] = '\0';
-	while (str[*i] == c && str[*i])
-		*i += 1;
-	return (s);
-}
-
-char			**ft_strsplit(const char *str, char c)
-{
-	int		i;
-	int		j;
-	int		wrd;
-	char	**s;
-
-	i = 0;
-	j = 0;
-	wrd = ft_count_words(str, c);
-	if (!(s = ft_memalloc(wrd + 2)))
-		return (NULL);
-	while (str[i] == c && str[i])
-		i++;
-	while (j < wrd && str[i])
-	{
-		s[j] = ft_word(str, c, &i);
-		j++;
-	}
-	s[j] = NULL;
-	return (s);
+	return (words);
 }
