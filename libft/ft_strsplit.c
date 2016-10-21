@@ -14,29 +14,23 @@
 
 char	**ft_strsplit(const char *s, char c)
 {
-	char	**ret;
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	char	**segs;
+	char	*src;
+	int		i;
+	int		count;
 
-	ret = ft_memalloc(ft_strlen(s) + 1);
-	if (!s || !c || !ret)
-		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	count = ft_count_object(s, c);
+	segs = (char **)ft_memalloc(sizeof(char *) * count);
+	while (*s)
 	{
-		if (s[i] == c)
-			i++;
-		else
+		if (*s == c)
 		{
-			len = 0;
-			while (s[i + len] && (s[i + len] != c))
-				len++;
-			ret[j++] = ft_strsub(s, i, len);
-			i = i + len;
+			*s = 0;
+			s++;
 		}
+		segs[i] = s;
+		s++;
 	}
-	ret[j] = 0;
-	return (ret);
+	return (segs);
 }
