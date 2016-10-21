@@ -31,7 +31,6 @@ char	**ft_strsplit(const char *s, char c)
 		while (*s == c)
 			s++;
 		next = ft_strchr(s,c);
-		printf("%s\n", next);
 		if (next)
 		{
 			words[cur_word] = ft_strsub(s, 0, (next - s));
