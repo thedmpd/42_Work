@@ -20,8 +20,8 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	next_lst = *alst;
 	while (next_lst)
 	{
-		(*del)(next_lst->content, (*next_lst).content_size);
 		temp = next_lst->next;
+		del(next_lst->content, next_lst->content_size);
 		ft_memdel((void **)next_lst);
 		next_lst = temp;
 	}
