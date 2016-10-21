@@ -15,18 +15,21 @@
 
 size_t	ft_count_objects(const char *s, char c)
 {
-	size_t count;
+	size_t		cnt;
+	size_t		in_substring;
 
-	count = 0;
+	in_substring = 0;
+	cnt = 0;
 	while (*s != '\0')
 	{
-		if (*s != c)
+		if (in_substring == 1 && *s == c)
+			in_substring = 0;
+		if (in_substring == 0 && *s != c)
 		{
-			count++;
-			s = ft_strchr(s, c);
+			in_substring = 1;
+			cnt++;
 		}
-		else
-			s++;
+		s++;
 	}
-	return (count);
+	return (cnt);
 }
