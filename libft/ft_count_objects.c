@@ -23,8 +23,9 @@ size_t	ft_count_objects(const char *s, char c)
 		if (*s != c)
 		{
 			count++;
-			s = ft_strchr(s,c);
+			s = ft_strchr(s, c);
 			printf("count %s\n", s);
+			s++;
 		}
 		else
 			s++;
