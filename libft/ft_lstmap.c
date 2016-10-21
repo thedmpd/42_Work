@@ -14,27 +14,24 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*ret;
-	t_list	*ret_new;
-	t_list	*temp;
-	t_list	*lst_new;
+	t_list *new_lst;
+	t_list *new_elem;
+	t_list *prev_elem;
 
-	if (lst == NULL)
-		return (NULL);
-	lst_new = lst;
-	temp = (*f)(lst_new);
-	if ((ret_new = ft_lstnew(temp->content, temp->content_size)) == NULL)
-		return (NULL);
-	ret = ret_new;
-	lst_new = lst_new->next;
-	while (lst_new != NULL)
+	new_lst = NULL;
+	if (lst && (*f))
 	{
-		temp = (*f)(lst_new);
-		ret_new->next = ft_lstnew(temp->content, temp->content_size);
-		if (ret_new->next == NULL)
-			return (NULL);
-		ret_new = ret_new->next;
-		lst_new = lst_new->next;
+		new_lst = (*f)(lst);
+		prev_elem = new_lst;
+		lst = lst->next;
+		while (lst)
+		{
+			new_elem = (*f)(lst);
+			prev_elem->next = new_elem;
+			prev_elem = new_elem;
+			lst = lst->next;
+		}
+		prev_elem->next = NULL;
 	}
-	return (ret);
+	return (new_lst);
 }
