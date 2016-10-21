@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_count_objects(const char *s, char c)
 {
@@ -23,6 +24,7 @@ size_t	ft_count_objects(const char *s, char c)
 		{
 			count++;
 			s = ft_strchr(s,c);
+			printf("count %s\n", s);
 		}
 		else
 			s++;
