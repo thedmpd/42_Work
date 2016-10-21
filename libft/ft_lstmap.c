@@ -12,17 +12,6 @@
 
 #include "libft.h"
 
-t_list  *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
-{
-        t_list  *newlst;
- 
-        if (lst && f)
-        {
-                return reccur(f(lst),lst->next,f);
-        }
-        return (0);
-}
- 
 t_list *recur(t_list *debut,t_list *fin,t_list *(*f)(t_list *elem))
 {
     if (fin)
@@ -33,4 +22,15 @@ t_list *recur(t_list *debut,t_list *fin,t_list *(*f)(t_list *elem))
     else{
      return debut;
     }
+}
+
+t_list  *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+{
+        t_list  *newlst;
+ 
+        if (lst && f)
+        {
+                return reccur(f(lst),lst->next,f);
+        }
+        return (0);
 }
