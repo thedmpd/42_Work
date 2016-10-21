@@ -25,15 +25,15 @@ char	**ft_strsplit(const char *s, char c)
 	segs = (char **)ft_memalloc(sizeof(char *) * count);
 	if (!segs)
 		return (NULL);
-	while (*s)
+	while (*src)
 	{
-		if (*s == c)
+		if (*src == c)
 		{
-			*s = 0;
-			s++;
+			*src = 0;
+			src++;
 		}
-		segs[i] = s;
-		s++;
+		segs[i] = src;
+		src++;
 	}
 	return (segs);
 }
