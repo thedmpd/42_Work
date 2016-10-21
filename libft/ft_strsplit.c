@@ -20,7 +20,7 @@ char	**ft_strsplit(const char *s, char c)
 	int		count;
 
 	i = 0;
-	count = ft_count_object(s, c);
+	count = ft_count_objects(s, c);
 	segs = (char **)ft_memalloc(sizeof(char *) * count);
 	while (*s)
 	{
