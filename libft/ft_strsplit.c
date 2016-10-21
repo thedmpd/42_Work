@@ -27,14 +27,14 @@ char	**ft_strsplit(const char *s, char c)
 	while (cur_word < word_count)
 	{
 		while (*s == c)
-			++s;
+			s++;
 		next = ft_strchr(s,c);
 		if (next)
 			words[cur_word] = ft_strsub(s, 0, (next - s));
 		else
 			words[cur_word] = ft_strdup(s);
 		s = next;
-		++cur_word;
+		cur_word++;
 	}
 	return (words);
 }
