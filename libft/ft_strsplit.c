@@ -21,7 +21,7 @@ char	**ft_strsplit(const char *s, char c)
 
 	i = 0;
 	count = ft_count_objects(s, c);
-	src = (char)s;
+	src = (char *)s;
 	segs = (char **)ft_memalloc(sizeof(char *) * count);
 	if (!segs)
 		return (NULL);
