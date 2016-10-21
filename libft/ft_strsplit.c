@@ -28,7 +28,7 @@ char	**ft_strsplit(const char *s, char c)
 	{
 		while (*s == c)
 			s++;
-		next = ft_strchr(s,c);
+		next = ft_strrchr(s,c);
 		if (next)
 			words[cur_word] = ft_strsub(s, 0, (next - s));
 		else
