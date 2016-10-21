@@ -86,5 +86,11 @@ int			ft_whitespace(int c);
 char		*ft_strtrim(char const *s);
 size_t		ft_count_objects(const char *s, char c);
 char		**ft_strsplit(const char *str, char c);
+void		ft_lstadd(t_list **alst, t_list *new);
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list		*ft_lstnew(void const *content, size_t content_size);
+t_list		*ft_lstnew(void const *content, size_t content_size);
 
 #endif
