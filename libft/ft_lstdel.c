@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddelgado <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/20 15:12:40 by ddelgado          #+#    #+#             */
-/*   Updated: 2016/10/20 15:12:41 by ddelgado         ###   ########.fr       */
+/*   Created: 2016/10/20 22:03:15 by ddelgado          #+#    #+#             */
+/*   Updated: 2016/10/20 22:03:17 by ddelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	int i;
+	t_list	*next_lst;
+	t_list	*temp;
 
-	i = (ft_strncmp(s1, s2, n) == 0) ? 1 : 0;
-	return (i);
+	if (alst != NULL)
+	{
+		next_lst = *alst;
+		while (next_lst != NULL)
+		{
+			if (del != NULL)
+				(*del)(next_lst->content, (*next_lst).content_size);
+			temp = next_lst->next;
+			ft_memdel(next_lst);
+			next_lst = temp;
+		}
+		*alst = NULL;
+	}
 }

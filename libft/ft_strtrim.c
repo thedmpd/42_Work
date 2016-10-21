@@ -22,6 +22,6 @@ char	*ft_strtrim(char const *s)
 	i = ft_strlen(s) - 1;
 	while (ft_whitespace(s[i]) && i > 0)
 		i--;
-	sub = ft_strsub(s, 0 , i + 1);
+	sub = ft_strsub(s, 0, i + 1);
 	return (sub);
 }

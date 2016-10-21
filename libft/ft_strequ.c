@@ -15,7 +15,7 @@
 int	ft_strequ(char const *s1, char const *s2)
 {
 	int i;
-	
-	i = (ft_strcmp(s1,s2) == 0) ? 1 : 0;
+
+	i = (ft_strcmp(s1, s2) == 0) ? 1 : 0;
 	return (i);
 }
